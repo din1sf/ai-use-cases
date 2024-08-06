@@ -11,7 +11,8 @@ if uploaded_file is not None:
     # load uploaded XLS file into a dataframe (only the first sheet)
     testcases_df = pd.read_excel(uploaded_file,sheet_name="Test_Case_Upload_Template_CPT")
 
-    st.write(testcases_df)
+    with st.expander('Loaded data'):
+        st.write(testcases_df)
 
     # copy few columns from the dataframe
     df = pd.DataFrame()
